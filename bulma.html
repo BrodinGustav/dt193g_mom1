@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--Hämta Bulma-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+
+  <script src="/main.js"></script>
+
+  <title>DT193G Bulma</title>
+</head>
+
+<body>
+
+  <!--Centrerar herobild till sidan med egen CSS-->
+  <style>
+    figure {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+
+  <!--Navigering-->
+  <nav class="navbar has-shadow">
+
+    <div class="navbar-brand">
+      <a class="navbar-item">
+        <img src="/pictures/bulma.png" alt="ramverkslogga" style="max-height: 70px" class="py-2 px-2">
+      </a>
+
+      <!-- Hamburgarmeny för mindre skärmar -->
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+
+    <div id="navbarMenu" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="index.html">Start</a>
+        <a class="navbar-item" href="bootstrap.html">Bootstrap</a>
+        <a class="navbar-item" href="tailwind.html">Tailwind</a>
+        <a class="navbar-item" href="publicering.html">Publicering</a>
+      </div>
+    </div>
+  </nav>
+
+  <!--Huvudsektion-->
+
+  <!--Breadcrumbs-->
+  <nav class="breadcrumb has-arrow-separator ml-5" aria-label="breadcrumbs">
+    <ul>
+      <li><a href="index.html">Start</a></li>
+      <li><a href="bootstrap.html">Bootstrap</a></li>
+      <li><a href="tailwind.html">Tailwind</a></li>
+      <li><a href="publicering.html">Publicering</a></li>
+      <li class="is-active"><a href="bulma.html" aria-current="page">Bulma</a></li>
+    </ul>
+  </nav>
+
+  <!--Herobild som rubrik-->
+  <section class="hero is-small is-transparant is-bold">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <figure class="image is-128x128">
+          <a href="https://bulma.com">
+            <img src="/pictures/bulma.png" alt="Hero Image"">
+          </a>
+          <h1 class=" title">
+            Bulma
+            </h1>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!--Informationsketion för ramverk-->
+
+  <section class="section">
+    <div class="container">
+
+      <!--Använder flexbox med wrap för centrering av kolumner vid mindre skärm-->
+      <div class="columns is-flex is-flex-wrap-wrap is-centered">
+
+        <!--Responsiva klasser för mobil, tablet och deskop för div-->
+        <div class="column is-12-mobile is-4-tablet is-3-desktop">
+
+          <!--Card används för stilrenare layout gällande textelement-->
+          <div class="card">
+            <div class="card-content">
+
+              <!--Notification skapar en "visuell ruta" och färg justeras med "is-warning"-->
+              <div class="notification is-warning">
+                <p>Jag har använt ramverket <a class="underline" href="https://bulma.com">Bulma</a> CSS för aktuell
+                  undersida.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="column is-12-mobile is-4-tablet is-3-desktop">
+          <div class="card">
+            <div class="card-content">
+              <div class="notification is-link">
+                <p>Bulma CSS är ett modernt open-source CSS-ramverk baserat på Flexbox, vilket gör det enkelt att bygga
+                  responsiva och användarvänliga webbgränssnitt utan att behöva skriva egen CSS-kod.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column is-12-mobile is-4-tablet is-3-desktop">
+          <div class="card">
+            <div class="card-content">
+              <div class="notification is-danger">
+                <p>Till skillnad från utility-first-ramverk som Tailwind, använder Bulma ett klassiskt tillvägagångssätt
+                  där komponenter som buttons, forms, navbar och modals redan är färdiga och designade, vilket gör att
+                  utvecklare snabbt kan implementera vanliga element utan mycket konfiguration.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="column is-12-mobile is-4-tablet is-3-desktop">
+          <div class="card">
+            <div class="card-content">
+              <div class="notification is-primary">
+                <p>Bulma kännetecknas av sin enkla syntax och användning av fördefinierade klasser som is-primary,
+                  is-danger, is-small, och is-fullwidth. Med dessa klasser går det snabbt att justera design och
+                  färgscheman utan att skriva extra CSS.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="column is-12-mobile is-4-tablet is-3-desktop">
+          <div class="card">
+            <div class="card-content">
+              <div class="notification is-info">
+                <p>Bulma är mobile-first. Responsiv design är inbyggd från början. Genom klasser som is-mobile,
+                  is-desktop, eller is-widescreen är det enkelt att skapa layoutanpassningar för olika skärmar.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!--Tabell-->
+  <div class="columns is-flex is-flex-wrap-wrap is-centered">
+
+    <!--Inramad tabell med hovereffekt-->
+    <table class="table is bordered is-striped is-hoverable">
+      <thead>
+        <tr class="is-primary">
+          <th>#</th>
+          <th>Namn:</th>
+          <th>Ålder:</th>
+          <th>Stad:</th>
+          <th>Yrke:</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>1</th>
+          <td>Gustav</td>
+          <td>37</td>
+          <td>Östersund</td>
+          <td>Ninja</td>
+        </tr>
+        <tr>
+          <th>2</th>
+          <td>Helen</td>
+          <td>37</td>
+          <td>Östersund</td>
+          <td>Samuraj</td>
+        </tr>
+        <tr>
+          <th>3</th>
+          <td>Daniel</td>
+          <td>34</td>
+          <td>Umeå</td>
+          <td>Fistfighter</td>
+        </tr>
+        <tr>
+          <th>4</th>
+          <td>Josefin</td>
+          <td>24</td>
+          <td>Kalmar</td>
+          <td>Beaststrangler</td>
+        </tr>
+        <tr>
+          <th>5</th>
+          <td>Klas</td>
+          <td>64</td>
+          <td>Göteborg</td>
+          <td>Grandmaster</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+
+  <!--FORM-->
+
+  <section class="section">
+
+    <div class="container">
+
+      <!--Form-->
+
+      <!--columns is multiline = gör kolumner responsiva. Bryter ner de över flera rader om utrymme inte finns. -->
+      <div class="columns is-multiline">
+
+        <!--is-full-moible = varje kolumn tar halva bredd på mobila enheter || is-half-tablet = varje kolumn tar hälften av bredden på tablet och större skärmar -->
+        <div class="column is-half-mobile is-half-tablet">
+          <div class="field">
+            <label class="label">Namn</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="Ange namn">
+            </div>
+          </div>
+        </div>
+
+
+        <div class="column is-half-mobile is-half-tablet">
+          <div class="field">
+            <label class="label">Ålder</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="Ange ålder">
+            </div>
+          </div>
+        </div>
+
+
+        <div class="column is-half-mobile is-half-tablet">
+          <div class="field">
+            <label class="label">Stad</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="Ange stad">
+            </div>
+          </div>
+        </div>
+
+
+        <div class="column is-full-mobile is-half-tablet">
+          <div class="field">
+            <label class="label">Yrke</label>
+            <div class="control">
+              </p>
+              <span class="select">
+                <select>
+                  <option>Ninja</option>
+                  <option>Samuraj</option>
+                  <option>Fistfighter</option>
+                  <option>Beaststrangler</option>
+                  <option>Grandmaster</option>
+                  <option>Dropkicker</option>
+                </select>
+              </span>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="column is-full-mobile">
+          <div class="field">
+            <div class="control">
+              <label class="checkbox">
+                <input type="checkbox">
+                Registrera fighter
+              </label>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="column is-full-mobile">
+          <div class="field">
+            <div class="control">
+              <button class="button is-primary is-fullwidth">Registrera</button>
+              </button>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+</body>
+
+</html>

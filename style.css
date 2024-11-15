@@ -1,0 +1,154 @@
+body
+{
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+    padding-top: 10px;
+    margin:0;
+    max-width:100%;
+    max-height:auto;
+    color:black;
+    
+}
+
+
+.index-nav
+{
+    text-align: center;
+    padding:2em;
+    background-color: #007bff;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+.index-nav a
+{
+    color:#fff;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 8px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.index-nav a:hover {
+  background-color: #0056b3;
+  border-radius:60%;
+}
+
+h1, h2, h3
+{
+    text-align: center;
+}
+
+h1{
+  font-size: 2.5rem;
+  
+    color: #9ad1ff;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.uppgift-container
+{
+  max-width: 800px;
+    background-color: #fff;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .uppgift-article {
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+  .information_1, .information_2, .information_3, .information_4, .information_5, .information_6
+  {
+    margin:0 auto;
+    background-color:beige;
+    padding:1.2em;
+    box-shadow: 1px 8px lightgray;
+    width:50%;
+    margin-bottom:1em;
+  }
+
+  .information_1
+  {
+    border-start-start-radius: 50%;
+  }
+
+  .information_2
+  {
+    background-color:lightcoral;
+    border-start-end-radius: 50%
+  }
+
+  .information_3
+  {
+    background-color:aquamarine;
+    border-end-start-radius: 50%
+
+  }
+  .information_4
+  {
+    background-color:aliceblue;
+    border-end-end-radius: 50%
+  }
+  .information_5
+  {
+    background-color:bisque;
+    border-start-start-radius: 50%;
+  }
+  .information_6
+  {
+    background-color:aqua;
+    border-start-end-radius: 50%;
+  }
+
+  .footer
+  {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .footer p {
+    margin: 5px 0;
+}
+
+  @media (max-width: 799px) {
+
+    body
+    {
+      padding:0;
+      margin-top:2em;
+      max-width:100%;
+      max-height:auto;
+    }
+    
+    .uppgift-container {
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .index-nav a {
+    display: block;
+    margin: 5px 0;
+}
+
+    .uppgift-article
+    {
+     max-width: 80%;
+    }
+  
+    .footer
+    {
+      flex-direction: column;
+    }
+  }

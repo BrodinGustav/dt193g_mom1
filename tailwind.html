@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--Hämtar in Tailwind JS-fil-->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!--Plugin för forms och typografi-->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+
+  <!--Custom CSS som supportar alla tailwinds features-->
+  <style type="text/tailwindcss">
+    @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+
+      </style>
+
+  <!--<link rel="stylesheet" href="style.css">-->
+
+  <title>DT193G Tailwind</title>
+</head>
+
+<body>
+
+  <!--Färgeffekter sätts på navigering genom hover-->
+  <div class="container mx-auto px-4 max-w-screen-md h-14 bg-gradient-to-r from-purple-500 to-pink-500 rounded-b-lg">
+    <nav class="flex flex-row justify-evenly items-center mt-5 pt-3">
+      <a href="index.html" class="hover:text-pink-500 transition duration-200">Startsida</a>
+      <a href="bootstrap.html" class="hover:text-blue-500 transition duration-200">Bootstrap</a>
+      <a href="bulma.html" class="hover:text-green-500 transition duration-200">Bulma</a>
+      <a href="publicering.html" class="hover:text-orange-500 transition duration-200">Publicering</a>
+    </nav>
+  </div>
+
+  <!--Sätter sectionen i centrum på sidan-->
+  <section class="container mx-auto px-4 max-w-screen-md">
+
+    <!--Bild som rubrik. Görs responsiv-->
+    <div class="relative bg-cover bg-center h-48 sm:h-64 md:h-80 lg:h-[400px]"
+      style="background-image: url('/pictures/tailwind.png');"></div>
+
+    <section class="container mx-auto px-4 max-w-screen-md ">
+      <article class="leading-[1,4rem]">
+
+        <!--Skapar "kort" som div för text genom max-w, bg-white, shadow-lg och rounded-lg-->
+
+        <div class="max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden mb-5">
+          <div class="bg-gradient-to-r from-blue-500 to-green-500 p-4">
+            <h2 class="text-white text-xl">Vad är Tailwind?</h2>
+          </div>
+          <div class="p-4">
+            <p>Tailwind CSS är ett utility-first ramverk som gör det enkelt att bygga responsiva och anpassningsbara
+              UI-komponenter direkt i HTML.</p>
+          </div>
+        </div>
+
+
+        <div class="max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden mb-5">
+          <div class="bg-gradient-to-r from-green-500 to-blue-500 p-4">
+            <h2 class="text-white text-xl">Hur fungerar Tailwind?</h2>
+          </div>
+          <div class="p-4">
+            <p>Till skillnad från traditionella CSS-ramverk som Bootstrap, använder Tailwind utility-klasser för att
+              direkt styra styling utan att skriva egen CSS-kod.
+              Klasserna kan kombineras för att snabbt bygga responsiva och dynamiska gränssnitt.</p>
+          </div>
+        </div>
+
+
+        <div class="max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden mb-5">
+          <div class="bg-gradient-to-r from-blue-500 to-pink-500 p-4">
+            <h2 class="text-white text-xl">Vad kännetecknar Tailwind?</h2>
+          </div>
+          <div class="p-4">
+            <p>Ett typiskt kännetecken för Tailwind är dess flexibilitet och möjligheten att anpassa designen direkt i
+              HTML genom utility-klasser som flex, justify-center, text-xl och bg-blue-500.</p>
+          </div>
+        </div>
+
+
+        <div class="max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden mb-5">
+          <div class="bg-gradient-to-r from-pink-500 to-orange-500 p-4">
+            <h2 class="text-white text-xl">Hur fungerar responsiviteten?</h2>
+          </div>
+          <div class="p-4">
+            <p>Tailwind är mobile-first, vilket innebär att responsiv design implementeras med hjälp av breakpoints
+              direkt i utility-klasser, exempelvis sm:text-sm eller lg:px-8.</p>
+          </div>
+        </div>
+
+
+        <div class="max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden mb-5">
+          <div class="bg-gradient-to-r from-orange-500 to-blue-500 p-4">
+            <h2 class="text-white text-xl">Skillnad mot andra ramverk?</h2>
+          </div>
+          <div class="p-4">
+            <p>I kontrast mot Bootstrap är Tailwind ett ramverk som har mer möjlighet till modifiering. Koden kan
+              anpassas mer individuellt, men det kräver lite arbete, medan Bootstrap är mer
+              låst till sina färdiga klasser.</p>
+          </div>
+        </div>
+
+      </article>
+    </section>
+
+
+    <section class="ml-1">
+      <article>
+
+        <h2 class="text-yellow-600 text-3xl">
+          <p>Tabeller och data</p>
+        </h2>
+
+
+        <div class="overflow-x-auto shadow-2xl">
+
+          <!--Sätter färgeffekter på tabell med hover-->
+          <table class="hidden md:table min-w-full border-separate border-spacing-0 border border-gray-300">
+            <thead>
+              <tr class="bg-gray-100">
+                <th class="border border-gray-300 px-4 py-2">#</th>
+                <th class="border border-gray-300 px-4 py-2">Namn</th>
+                <th class="border border-gray-300 px-4 py-2">Ålder</th>
+                <th class="border border-gray-300 px-4 py-2">Stad</th>
+                <th class="border border-gray-300 px-4 py-2">Yrke</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="hover:bg-gray-50">
+                <td class="border border-gray-300 px-4 py-2">1</td>
+                <td class="border border-gray-300 px-4 py-2">Gustav</td>
+                <td class="border border-gray-300 px-4 py-2">37</td>
+                <td class="border border-gray-300 px-4 py-2">Östersund</td>
+                <td class="border border-gray-300 px-4 py-2">Ninja</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="border border-gray-300 px-4 py-2">2</td>
+                <td class="border border-gray-300 px-4 py-2">Helen</td>
+                <td class="border border-gray-300 px-4 py-2">37</td>
+                <td class="border border-gray-300 px-4 py-2">Östersund</td>
+                <td class="border border-gray-300 px-4 py-2">Samuraj</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="border border-gray-300 px-4 py-2">3</td>
+                <td class="border border-gray-300 px-4 py-2">Daniel</td>
+                <td class="border border-gray-300 px-4 py-2">34</td>
+                <td class="border border-gray-300 px-4 py-2">Umeå</td>
+                <td class="border border-gray-300 px-4 py-2">Fistfighter</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="border border-gray-300 px-4 py-2">4</td>
+                <td class="border border-gray-300 px-4 py-2">Josefin</td>
+                <td class="border border-gray-300 px-4 py-2">24</td>
+                <td class="border border-gray-300 px-4 py-2">Kalmar</td>
+                <td class="border border-gray-300 px-4 py-2">Beaststrangler</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="border border-gray-300 px-4 py-2">5</td>
+                <td class="border border-gray-300 px-4 py-2">Klas</td>
+                <td class="border border-gray-300 px-4 py-2">64</td>
+                <td class="border border-gray-300 px-4 py-2">Göteborg</td>
+                <td class="border border-gray-300 px-4 py-2">Grandmaster</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+
+        <!--Responsiv del för tabell-->
+        <div class="md:hidden">
+          <div class="border border-slate-400 rounded-lg">
+            <div class="border border-slate-300 p-3">
+              <p><strong>#:</strong> 1</p>
+              <p><strong>Namn:</strong> Gustav</p>
+              <p><strong>Ålder:</strong> 37</p>
+              <p><strong>Stad:</strong> Östersund</p>
+              <p><strong>Yrke:</strong> Ninja</p>
+            </div>
+            <div class="border border-slate-300 p-3">
+              <p><strong>#:</strong> 2</p>
+              <p><strong>Namn:</strong> Helen</p>
+              <p><strong>Ålder:</strong> 37</p>
+              <p><strong>Stad:</strong> Östersund</p>
+              <p><strong>Yrke:</strong> Samuraj</p>
+            </div>
+            <div class="border border-slate-300 p-3">
+              <p><strong>#:</strong> 3</p>
+              <p><strong>Namn:</strong> Daniel</p>
+              <p><strong>Ålder:</strong> 34</p>
+              <p><strong>Stad:</strong> Umeå</p>
+              <p><strong>Yrke:</strong> Fistfighter</p>
+            </div>
+            <div class="border border-slate-300 p-3">
+              <p><strong>#:</strong> 4</p>
+              <p><strong>Namn:</strong> Josefin</p>
+              <p><strong>Ålder:</strong> 24</p>
+              <p><strong>Stad:</strong> Kalmar</p>
+              <p><strong>Yrke:</strong> Beaststrangler</p>
+            </div>
+            <div class="border border-slate-300 p-3">
+              <p><strong>#:</strong> 5</p>
+              <p><strong>Namn:</strong> Klas</p>
+              <p><strong>Ålder:</strong> 64</p>
+              <p><strong>Stad:</strong> Göteborg</p>
+              <p><strong>Yrke:</strong> Grandmaster</p>
+            </div>
+          </div>
+        </div>
+        </div>
+
+
+        <div class="border-b border-gray-900/10 pb-12">
+
+          <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+            <div class="sm:col-span-3">
+              <label for="first-name" class="text-blue-600">Namn</label>
+              <div class="mt-2">
+                <input type="text" name="first-name" id="first-name" autocomplete="given-name"
+                  class="block rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6">
+              </div>
+            </div>
+
+
+            <div class="sm:col-span-4">
+              <label for="email" class="text-blue-600">Ålder</label>
+              <div class="mt-2">
+                <input id="age" name="age" type="text" autocomplete="age"
+                  class="block rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6">
+              </div>
+            </div>
+
+            <div class="sm:col-span-3">
+              <label for="country" class="text-blue-600">Stad</label>
+              <div class="mt-2">
+                <input id="city" name="city" autocomplete="city-name"
+                  class="block rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm/6">
+              </div>
+
+
+              <div class="sm:col-span-3 mt-5">
+                <label for="fighter" class="text-blue-600">Välj fighter</label>
+                <div class="mt-2">
+                  <select id="fighter" name="fighter"
+                    class="block rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm/6">
+                    <option></option>
+                    <option>Ninja</option>
+                    <option>Samuraj</option>
+                    <option>Fistfighter</option>
+                    <option>Beaststrangler</option>
+                    <option>Grandmaster</option>
+                    <option>Dropkicker</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="relative flex gap-x-3 mt-5">
+                <div class="flex h-6 items-center">
+                  <input id="candidates" name="candidates" type="checkbox"
+                    class="size-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600">
+                </div>
+
+                <div>
+                  <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-blue-600"
+                    type="submit" class="btn btn-primary">Registrera</button>
+                </div>
+
+
+      </article>
+    </section>
+
+    <footer class="flex flex-col justify-center items-center text-orange-600">
+      <p>Gustav Brodin</p>
+      <p>DT193G</p>
+      <p>Moment 1</p>
+      <p>Webbutveckling</p>
+      <p>MIUN</p>
+    </footer>
+
+
+</body>
+
+</html>
